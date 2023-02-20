@@ -2,7 +2,7 @@ default:
   image: arm32v7/alpine
 
 build-job:
-  image: docker pull arm32v7/maven
+  image: arm32v7/maven
   stage: build
   script:
     - echo "Hello, $GITLAB_USER_LOGIN!"
