@@ -1,14 +1,16 @@
 default:
-  image: arm32v7/alpine
-
-pre-build-job:
-  stage: build
-  script:
-    - echo "Pre-Build-Stage HELLO $GITLAB_USER_LOGIN"
+  image: arm32v7/maven
 
 build-job:
-  image: arm32v7/maven
   stage: build
   script:
-    - echo "Hello, $GITLAB_USER_LOGIN!"
+    - echo "Compiling, $GITLAB_USER_LOGIN!"
     - mvn compile
+
+test-job: 
+  stage: test
+  script:
+    - echo "Testing, $GITLAB_USER_LOGIN!"
+    - mvn test
+
+
