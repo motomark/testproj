@@ -85,8 +85,7 @@ public class IteratingLists {
         aLongName.ifPresent(name -> System.out.println(String.format("A longest name: %s", name)));
 
 
-
-        // Efficient ways to add
+        // Efficient ways to add a delimiter.
         System.out.println(String.join(", ", friends));
         System.out.println(friends.stream().map(String::toUpperCase).collect(Collectors.joining(", ")));
         System.out.println(friends.stream().map(String::toUpperCase).collect(Collectors.toList()));
